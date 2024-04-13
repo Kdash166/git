@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Search</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+    <div id="pokemon-details">
+    
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Enter Pokémon name or ID" required>
+      <button id="search-button">Search</button>
+    </div> <div id="pokemon-name-container">
+      <h2 id="pokemon-name">Pokémon Name</h2>
+</div>
+<div id="image-display-container">
+      <img id="sprite" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Icon-round-Question_mark.jpg" alt="Pokémon Sprite"> <!-- Pokémon sprite image -->
+</div>
+      <!-- Table for Pokémon details -->
+      <table>
+        <tr>
+          <td>ID:</td>
+          <td id="pokemon-id"></td>
+        </tr>
+        <tr>
+          <td>HP:</td>
+          <td id="hp"></td>
+        </tr>
+        <tr>
+          <td>Attack:</td>
+          <td id="attack"></td>
+        </tr>
+        <tr>
+          <td>Defense:</td>
+          <td id="defense"></td>
+        </tr>
+        <tr>
+          <td>Special Attack:</td>
+          <td id="special-attack"></td>
+        </tr>
+        <tr>
+          <td>Special Defense:</td>
+          <td id="special-defense"></td>
+        </tr>
+        <tr>
+          <td>Speed:</td>
+          <td id="speed"></td>
+        </tr>
+        <tr>
+          <td>Type/s:</td>
+          <td id="types"></td>
+        </tr>
+        <tr>
+          <td>Weight:</td>
+          <td id="weight"></td>
+        </tr>
+        <tr>
+          <td>Height:</td>
+          <td id="height"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
