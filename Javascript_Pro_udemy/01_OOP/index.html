@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My HTML Page</title>
+</head>
+<body>
+</body>
+</html>
+    <script
+src = "bankaccountpractice.js"    
+    ></script>
+    <script> 
+// objects can be declared using new object();
+const key = "species"
+const pet = {species:"dog", name:"Elton", age:1}
+console.log(typeof(pet));
+// generally objects are accessed using dot notation
+console.log(pet.dog)
+console.log(pet[key])
+// one advantage of using square brackets method to access objects is 
+// it can take expressions - see above.
+// properties of objects that done exit always evaluate to undefined
+// all keys get stringified
+// doesnt matter if it is string or not it always gets stringified even 
+// for bools
+pet[true]= "hello";
+console.log(pet)
+console.log(pet["true"])
+// values on the other hand accept any type of value boolean string number, 
+// they also accept methods which is an important consideration when thiking about
+// OOP programming (Methods)
+pet.bark = function(){
+    return "WOOF WOOF"
+}
+
+// Functions and Data //
+
+// sometimes it makes more sense to store functions related to data as a method.
+// this can get a bit messy 
+// the key word .this refers to a certain object. 
+// if you build a object with a method and default values. 
+// you can call the function without parameters if you use the this key word. 
+// this is an example of wrapping data and functionality together. 
+// the problem is you need to keep creating new objects to do this. 
+// however there is a short cut. if you needed to create a thousand objects it would
+// waste alot of memory and time. so what is the solution?
+
+// classes //
+
+// classes act as a blueprint, they allow us to combind functionality and data together.
+// we define the blueprint which may contain methods or constant values. 
+// that blueprint isnt useful unless it is instantiated 
+//  syntax - class Triangle {
+
+ // function1 () {
+
+    // }
+ // function1 () {
+        
+    // }
+// }
+
+// let myTri = new Triangle (); 
+// this creates an object called myTri that will have the same methods as the 
+// original class.
+// this acts as a factory that creates objects. 
+// if values hadnt been given and the method tries to calculate with these then 
+// it returns NaN rather than undefined despite the method returning an empty value. 
+// the .this key word refers to the object not the class. 
+// syntactic rules normally use UpperCamelCase for Classes for example 
+// -TriangleBuilderClass
+// -PersonPasswordClass
+// this is a pattern not a rule
+// objects generate by classes are still objects so typeof will show them as objects. 
+// if you want to tell if an object is an instance of a certain Class you can use
+// isntanceof 
+//  [1,2,3] instanceof Array = true;
+//  [1,2,3] instanceof Number = false;
+
+// constructors //
+
+// constructors allows you add values into an new instance object made from a class
+// for example
+
+//  syntax - class Triangle {
+// constructor(a,b) {
+// this.a = a;
+// this.b = b;
+//}
+ // function1 () {
+
+    // }
+ // function1 () {
+        
+    // }
+// }
+
+// constructors are convetionally at the top of the class. 
+// so you can now instantiate a new instance like this. 
+
+// const tri = new Triangle (2,4);
+
+// the new object created will have the key values
+// a=2
+// b=4 
+// function1()
+// function2()
+
+// generally a constructor does two things inputs data into an instantiated object 
+// and validates that data.
+// if the values need to be validated as finite there is an easy way to do this. 
+// you can use the Number.isFinite() method. 
+console.log(Number.isFinite(42));      // true
+console.log(Number.isFinite(Infinity)); // false
+console.log(Number.isFinite(-Infinity));// false
+console.log(Number.isFinite(NaN));      // false
+console.log(Number.isFinite(0));        // true
+console.log(Number.isFinite(1 / 0));    // false
+console.log(Number.isFinite('42'));     // false
+console.log(Number.isFinite(null));     // false
+// you can also throw your own custom error -- check triangle.js
+// Methods //
+
+// functions pl
+
+
+    </script>
