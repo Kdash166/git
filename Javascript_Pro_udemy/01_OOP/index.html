@@ -8,10 +8,18 @@
 <body>
 </body>
 </html>
-    <script
+    <!-- <script
 src = "bankaccountpractice.js"    
+    ></script> -->
+
+    <!-- <script
+src = "triangle.js"    
     ></script>
-    <script> 
+    <script>  -->
+        <script
+        src = "static_cat.js"    
+            ></script>
+            <script> 
 // objects can be declared using new object();
 const key = "species"
 const pet = {species:"dog", name:"Elton", age:1}
@@ -121,10 +129,70 @@ console.log(Number.isFinite(1 / 0));    // false
 console.log(Number.isFinite('42'));     // false
 console.log(Number.isFinite(null));     // false
 // you can also throw your own custom error -- check triangle.js
-// Methods //
+
+                    // Methods //
 
 // functions placed in class are methods
-// 
+// they have access to variables through the this key word 
+// they you also need to use the this key world to call another method inside 
+// another method. it needs to refer to the instance of the class.
+// you can see this in the get area function in triangle.js
+// you dont actually need to to use .this for built in methods like Math. 
+
+                    // inheritance //
+
+// imagine you want something that is very similar to a already existant class?
+//  the reason you migth consider this as apposed to copying a class is because 
+// if you edit variables in the original class or methods you need to do this 
+// in the original class otherwise it leads to alot of inconsistencies and duplication
+// you can use the key word extends. this allows you to extend a class from a an original 
+// class for example class ShyTriangle extends Triangle {
+// ideal if you want to avoid repeating code and it will also inherit the properties
+// of its parent.
+// }
+// in the above example ShyTriangle is the sub/child class and Triangle is the super/parent class
+// say you have a parent and child class with the same method. 
+// javascript will check the child method first before it checks the parent method. 
+// this is useful if you don't want to rename your method as it is named obviously. 
+// check triangle.js for an example ShyTriangle calls its describe not Triangles when instantiated
+// The parent class doesnt have access to the child classes methods. 
+
+                    // keyword super//
+
+// if you need to add a new property to  constructor you can call the parents constructor.
+// using the word super this will call the parent constructor and pass through the variables. 
+//  you can see an example of this in triangle.js
+//  if your adding more properties to your child class you have to use super.
+//  you can chain this together making the child class the parent class of the next one.
+//  you can see this in triangle.js
+
+                    // static properties//
+// static properties are tied to the class they do not live on any instances 
+//  you woulld need to access them by referencing the class. static_cat.js. 
+// you access species by using Cat.species this is something reserved for constant values
+// in other language these are often called class attributes. 
+// if you create multiple instances of cats you have to change species 10 thousand times if you make a mistake
+// rather than just changing it once!
+
+                    // static methods//
+
+// static methods work in a very similar way to static properties
+//  it doesnt exist on the instance. this will refer to the class which will return 
+// undefined. 
+// in most OO languages these are called class methods not static mehtods.
+
+// sometimes classes are used just to group a bunch of common functions together
+// in these instances it is better to use static methods as the intetion is to never
+// instantiate these objects, just to simply access their methods api.js is an example 
+// Math is an example of native object with static methods.
+// a factory function is a function that instantiates a new object using a class and some 
+// other processes to create unique instantiations. This could be used for invoice numbers
+// any customer number or any unique identifier. 
+//  something specific for that instance like a method that calculates a random attack power
+// on an enemy you would call using an instantiated method. 
+// something that calulates a spercific value you always want to be the same like defence in area
+// is maybe better as a static method.
+
 
 
     </script>
