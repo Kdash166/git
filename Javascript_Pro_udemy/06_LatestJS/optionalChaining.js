@@ -73,3 +73,23 @@ console.log("First name: ", firstName);
 console.log("Longitude: ", long);
 
 user.greet?.();
+
+//  optional chaining //
+
+// allows you to reference deep within a chain of connected objects without having to check for each reference in a chain
+// for example  here is the traditional way of checking for a value
+
+// const user = user && user.name  && user.name.first
+
+// the problem with this form of chaining can become extremely long in a chain of nested objects
+//  optional chaining makes the code easier to write and understand:
+
+//  const user = user?.name?.first
+
+//  you can also use optional chaining to call a method on an object
+
+// user.greet?.()
+
+// if this doesn't exist it returns undefined rather than " greet is not a function"
+
+// in summery otpional chaining is used to see if a chain of properties excist.
