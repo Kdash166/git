@@ -17,3 +17,16 @@ Promise.any([
   .catch((e) => {
     console.log("OH NO, this means some promise was rejected", e);
   });
+
+  // Promise.amy //
+
+  // this takes an iterable of promise objects and when 
+  // the first promise resolves it returns a fullfilled promise
+  // if all the promises are rejected then it rejects the promise.
+  //  it resolves with the first value it is passed it wont fail.
+
+  //this differs from promise.race because
+  //  this will reject the promise if the first one fails.
+  // this is good if you have 3 webservices as backups and it will access 
+  // the first winning promise that is fullfilled this will use the fastest
+  // service first. If they all fail then it will return an error.

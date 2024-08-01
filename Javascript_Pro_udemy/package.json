@@ -1,0 +1,13 @@
+
+{
+  "name": "javascript_pro_udemy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "C:\\Users\\Kieran\\Documents\\git\\Javascript_Pro_udemy\\08_ScopeAndClosures\\scopeChain.js",
+  "scripts": {
+    "start": "nodemon C:\\Users\\Kieran\\Documents\\git\\Javascript_Pro_udemy\\08_ScopeAndClosures\\scopeChain.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
