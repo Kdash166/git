@@ -9,6 +9,7 @@ async function postData() {
 
   const response = await fetch("http://localhost:3001/companies", {
     method: "POST",
+    // the default method is GET so you need to set it to POST
     headers: { "content-type": "application/json" },
     body: JSON.stringify(newCompany),
   });
@@ -24,3 +25,10 @@ async function getCompany() {
   const data = await response.json();
   console.log(data);
 }
+// this is a get request to find the data that has been posted
+// this is a real GET/POST request
+
+// POST request //
+// this is a request to upload information to the API or database
+// this is called creating a new resource.
+

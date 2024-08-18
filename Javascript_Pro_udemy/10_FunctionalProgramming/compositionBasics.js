@@ -16,3 +16,11 @@ function joinWithDash(array) {
 }
 
 joinWithDash(splitWords(lowerCaseString("My Favorite Function")));
+
+
+// composition  //
+
+// composition allows you to pipeline data through multiple functions 
+//  to perform distinct operations on them. 
+//  sometimes you need a helper function or compose function. 
+// these can be created found in liberaries 

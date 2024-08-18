@@ -37,3 +37,17 @@ const bubbleDuration =
 
 console.log(`Native Sort Took ${nativeDuration}ms`);
 console.log(`Bubble Sort Took ${bubbleDuration}ms`);
+
+// performance //
+
+// performance is an object it conains a mothod called .mark
+// this method places a .mark on the performances object 
+//  you can then use another method .measure which takes two .marks as an argument
+// it then measures the differences in time between the two.
+// you can see the implementation above. which compares the times between
+// native sort and bubble sort. 
+// this allows you to measure efficency this could be good when debugging code or 
+// checking which code is slowing an application down and may need to be refactored.
+
+// performance.getEntryByType("")//
+//  this method collects data just from a spercific type of resources

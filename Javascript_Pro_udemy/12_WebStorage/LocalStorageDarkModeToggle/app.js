@@ -11,6 +11,7 @@ const toggleTheme = () => {
     toggleButton.textContent = "Enable Light Mode";
   }
 };
+// uses the button to change light and datk mode
 
 const applySavedTheme = () => {
   const savedTheme = localStorage.getItem("theme");
@@ -23,11 +24,25 @@ const applySavedTheme = () => {
   }
 };
 toggleButton.addEventListener("click", toggleTheme);
-
+// checks theme in local storage and applies theme 
+// from last session.
 applySavedTheme();
-
+// calls fucntion
 window.addEventListener("storage", (e) => {
   if (e.key === "theme") {
     applySavedTheme();
   }
 });
+
+// event listener listens for a change in LocalStorage
+//once a change has been detected it the theme is applied.
+
+//Synchronization: This allows the theme (dark or light mode) to stay consistent 
+// across different tabs or windows of the same website. 
+// If you change the theme in one tab, the change will automatically apply to other 
+// open tabs of the same site.
+
+// IMPORTANT NOTE //
+// local storages is shared between all tabs or windows of a particular 
+// website, host, and domain. 
+// you need to listne for a storage event to change somethink.

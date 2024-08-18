@@ -58,6 +58,7 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       const { isIntersecting } = entry;
       const { id } = entry.target;
+      // destructured the ID so you can track mutiple ads.
       if (isIntersecting) {
         console.log(`${id} ad is visible`);
       } else {
@@ -70,3 +71,24 @@ const observer = new IntersectionObserver(
 
 const ads = document.querySelectorAll(".ad");
 ads.forEach((ad) => observer.observe(ad));
+
+// Intersection observer API //
+
+// allows you to turn on or off a animations if they 
+// are being observed
+// most importantly it tracks when the target element 
+// is observed when interesecting with the view port. 
+// when an intersection is observed it will then run a 
+// call back. 
+// is intersecting is important as it tells you how much
+// you can pass a second parameter, this effects when function fires. 
+// so if the value is 1. then the whole div would need to be in the viewport. 
+// if it i set to 0.5 as above then 50% of the ad would need to be displayed.
+
+// you can provide an array of thresholds so the function will fire. 
+// you could have minimal 0.25 0.50 0.75 1.00 for engagment or maximum view
+// or something like that. 
+//  you can return the a percentage see array above. 
+// you can track ad times to find out the time the user was engaging with the time 
+
+

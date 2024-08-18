@@ -24,3 +24,16 @@ function smoothScrollToTop() {
 document
   .querySelector(".back-to-top")
   .addEventListener("click", smoothScrollToTop);
+
+  // 1 second scroll //
+
+// this uses request animation frame which provides the scroll
+// this allows you to  find the time of the frame and using logic 
+// will let you set a duration to 1 second doesnt matter 
+// how far down the page you are. this is good for using animations 
+// that take set times. 
+//  you also dont need to clear the interval or timeout it just use natural logic
+//  based the framerate value check animation returns and the frame rate and you can 
+// and compares it to the duration. 
+// this is good when you dont know anything users about browser  system or refresh rate
+// it helps make animations accross browsers and different enviroments consistent.

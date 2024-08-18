@@ -48,3 +48,10 @@ window.addEventListener("scroll", () => {
 
 // Initial load
 loadMoreItems();
+
+// throttling //
+// throttling will prevent further calls from some amount of time //
+// this uses set timer to add the space in. 
+
+
+

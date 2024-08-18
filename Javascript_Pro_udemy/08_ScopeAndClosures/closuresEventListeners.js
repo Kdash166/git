@@ -18,6 +18,10 @@ function createCounterButton(id) {
   });
 }
 
+// each count will be individual to its own button
+// you get a unique function per eventlistner created 
+// by factory function. 
+
 createCounterButton("btn1");
 createCounterButton("btn2");
 createCounterButton("btn3");

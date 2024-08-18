@@ -1,6 +1,7 @@
 function compose(...functions) {
   return function (data) {
     return functions.reduceRight((val, func) => func(val), data);
+  
   };
 }
 
@@ -23,3 +24,6 @@ function joinWithDash(array) {
 const sluggify = compose(joinWithDash, splitWords, lowerCaseString);
 
 const lowerAndReplaceS = compose(replaceS, lowerCaseString);
+// fancy compose function //
+// this will take any number of functions// 
+// return the function with the value once the value has been processed.

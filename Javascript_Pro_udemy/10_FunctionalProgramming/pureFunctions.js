@@ -20,3 +20,12 @@ function addToArray(arr, value) {
 function pureAddToArray(arr, value) {
   return [...arr, value];
 }
+
+// pure functions //
+
+// function should depend soley on the input 
+// no states no mutation of external data 
+// no side effects from the data.
+// you can see the pure functions do not modfiy external 
+// states they always return the same output from the same
+// input.

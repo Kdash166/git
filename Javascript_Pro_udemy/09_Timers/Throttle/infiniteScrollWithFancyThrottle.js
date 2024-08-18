@@ -69,3 +69,9 @@ window.addEventListener("scroll", () => {
 
 // Initial load
 loadMoreItems();
+
+// fancy throttle function //
+
+// it is recommended you use a throttle library or copy the code from one 
+// like lodash. you can also get libraries for debouncing. thottling 
+// Throttling ensures that a function is called at most once in a specified interval. It essentially limits the number of times a function can execute.
