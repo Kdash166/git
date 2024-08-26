@@ -65,3 +65,28 @@ app.get("/:roomName", function (req, res, next) {
 });
 
 module.exports = app;
+
+// web sockets //
+
+// web socket set up a persistent connection between a server 
+// and a user, this allows bidirectional information rather than request/ response
+// this allows for low letancy efficient updates of things like chat apps 
+// live delivery services. the altenative is called long poling where 
+// a http request is made every 1 second but this is high letancy and bombards a server
+// with alot of requests that will result in negative responses. 
+// this is why websockets are the more efficeint option.
+// web sockets work with other languages like python and ruby. 
+// need to use express-ws lib to make this easier. 
+// once called a websocket will persist for that user.
+// web sockets are different between the client side it isnt the same tunnel.
+// .open only occurs once when the web socket is opened. 
+// .onmessage occurs every time a message is sent.
+// .onerror is what happens if the websocet fails 
+// opens to an empty or invalid end point or opening socket failed
+// .onclose this only desplays once once the websocket is closed.
+// when user idle, show alert when user idle for 5 minutes .onclose websocket. 
+// this could be useful functionality.
+
+// frontend websocket //
+// broadcast is a helper function that iterates over all the members in a chat room
+// then it sends message down those websockets.

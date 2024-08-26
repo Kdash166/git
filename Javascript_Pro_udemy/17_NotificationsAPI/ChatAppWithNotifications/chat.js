@@ -75,3 +75,8 @@ document.querySelector("#msg-form").addEventListener("submit", (evt) => {
   socket.send(JSON.stringify({ type: "chat", text: input.value }));
   input.value = "";
 });
+
+// notifications added //
+
+// notifications have been managed so they dont show 
+// for the current user. 
