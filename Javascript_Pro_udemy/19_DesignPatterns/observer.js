@@ -58,3 +58,14 @@ const daniel = new Subscriber("Daniel");
 const puppyBlog = new Blog();
 puppyBlog.subscribe(colt);
 puppyBlog.subscribe(daniel);
+// observer pattern //
+
+// the observer pattern enables a subscription model 
+// where objects (observers) "listen" to events and 
+// get notified when events occur.
+// imagine a button you can observe a hover function or a click function 
+//these functions run when an event is observed. 
+// Vue.js uses a reactive data model where the component re-renders
+// are triggered by data changes, which is an application of the observer pattern
+// subject = data/ application state components = rerenders are being triggered. 
+// RXjs makes it easier to implement this functionality.

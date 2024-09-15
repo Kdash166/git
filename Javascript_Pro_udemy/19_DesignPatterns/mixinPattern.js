@@ -25,3 +25,13 @@ class Animal {
 const bernie = new Animal("Bernie", "Pelican");
 Object.assign(bernie, fly);
 Object.assign(bernie, swim);
+
+
+
+// mix in //
+
+// this is an object where methods are assigned to objects
+// this is useful when you dont want to build an object 
+// with properties it doesnt have. 
+// you can add these in whenever you need this keeps objects clean 
+// methods that shouldn't exist dont. 
