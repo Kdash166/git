@@ -49,14 +49,14 @@ function App() {
 //   map takes every element out of an array 
 
   return (
-    <div>
+    <div className="app">
       <button onClick={handleClick}>
         {/* small callbacks are normally just added directly into props
     We call this function inline as it is inline with the html */}
         Add Animal
       </button>
 
-      <div>{renderedAnimals}</div>
+      <div className="animal-list">{renderedAnimals}</div>
     </div>
   );
 }
